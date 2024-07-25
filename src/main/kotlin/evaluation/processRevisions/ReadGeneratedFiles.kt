@@ -59,7 +59,7 @@ fun main() {
             val factoryOfTransformationsRight = FactoryOfTransformations(base, right)
             val factoryOfTransformationsLeft = FactoryOfTransformations(base, left)
 
-            val redundancyFreeSetOfTransformations = RedundancyFreeSetOfTransformations(factoryOfTransformationsLeft, factoryOfTransformationsRight)
+            val redundancyFreeSetOfTransformations = RedundancyFreeSetOfTransformations(factoryOfTransformationsLeft.getListOfAllTransformations().toMutableSet(), factoryOfTransformationsRight.getListOfAllTransformations().toMutableSet())
 
             val listOfTransformationsRight = redundancyFreeSetOfTransformations.getLeftSetOfTransformations()
             val listOfTransformationsLeft = redundancyFreeSetOfTransformations.getRightSetOfTransformations()
